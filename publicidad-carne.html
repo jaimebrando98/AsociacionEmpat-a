@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prohibir la publicidad de la carne — Empatía</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#C8174E;
+    --forest-soft:#E54C82;
+    --cream:#FFFFFF;
+    --sand:#FFF0F5;
+    --amber:#FF6FA0;
+    --clay:#A30E3E;
+    --ink:#2B1620;
+    --line: rgba(200,23,78,0.14);
+    --radius: 18px;
+    --maxw: 1180px;
+    --maxw-article: 760px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; font-family:'Inter',sans-serif; color:var(--ink); background:var(--cream); line-height:1.6; -webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Fraunces',serif; margin:0; color:var(--forest); font-weight:600; letter-spacing:-0.01em;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  .article-wrap{max-width:var(--maxw-article); margin:0 auto; padding:0 28px;}
+  .eyebrow{text-transform:uppercase; font-size:0.74rem; letter-spacing:0.16em; font-weight:600; color:var(--clay);}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation:none !important; transition:none !important;} }
+
+  /* HEADER */
+  header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:var(--maxw); margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-weight:600; font-size:1.15rem; color:var(--forest);}
+  .brand .mark{width:36px; height:36px; border-radius:50%; object-fit:cover; background:var(--sand);}
+  nav.links{display:flex; gap:26px; align-items:center; flex-wrap:wrap;}
+  nav.links a{font-size:0.9rem; font-weight:500; color:var(--forest); opacity:0.85; transition:opacity .2s;}
+  nav.links a:hover{opacity:1;}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:11px 22px; border-radius:999px; font-weight:600; font-size:0.9rem; border:1px solid transparent; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease;}
+  .btn-primary{background:var(--forest); color:#fff;}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(200,23,78,0.25);}
+  .btn-ghost{border-color:var(--forest); color:var(--forest);}
+  .btn-ghost:hover{background:var(--forest); color:#fff;}
+
+  /* INDEX BAR (jump links between the 3 pages) */
+  .index-bar{background:var(--sand); border-bottom:1px solid var(--line); padding:14px 0;}
+  .index-bar .wrap{display:flex; gap:14px; flex-wrap:wrap; align-items:center;}
+  .index-bar span.label{font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--clay); margin-right:4px;}
+  .index-bar a{font-size:0.85rem; font-weight:600; color:var(--forest); padding:7px 14px; border-radius:999px; background:#fff; border:1px solid var(--line); transition:all .2s;}
+  .index-bar a:hover{background:var(--forest); color:#fff; border-color:var(--forest);}
+
+  /* ARTICLE PAGE */
+  .page{padding:64px 0 90px; border-bottom:10px solid var(--sand);}
+  .page:last-of-type{border-bottom:none;}
+  .tag-pill{display:inline-block; background:var(--sand); color:var(--clay); font-size:0.74rem; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; padding:6px 14px; border-radius:999px; margin-bottom:18px;}
+  .page h1{font-size:clamp(1.9rem, 4vw, 2.7rem); line-height:1.12; font-weight:500;}
+  .page .meta{margin-top:16px; font-size:0.88rem; color:var(--clay); font-weight:500;}
+  .hero-img{margin-top:32px; border-radius:var(--radius); overflow:hidden; aspect-ratio:16/9.5;}
+  .hero-img img{width:100%; height:100%; object-fit:cover;}
+  .article-body{margin-top:38px; font-size:1.05rem; color:#3a2230;}
+  .article-body p{margin:0 0 22px;}
+  .article-body h2{font-size:1.5rem; font-weight:600; margin:42px 0 16px;}
+  .article-body h3{font-size:1.2rem; font-weight:600; margin:32px 0 14px; color:var(--clay);}
+  .article-body strong{color:var(--forest);}
+  .article-body a{color:var(--forest); border-bottom:1.5px solid var(--amber); font-weight:500;}
+  .article-body figure{margin:30px 0;}
+  .article-body figure img{border-radius:14px;}
+  .article-body figcaption{font-size:0.82rem; color:#8a6072; margin-top:10px; text-align:center;}
+  .article-body blockquote{
+    margin:34px 0; padding:24px 28px; background:var(--sand); border-left:4px solid var(--forest);
+    border-radius:0 14px 14px 0; font-family:'Fraunces',serif; font-style:italic; font-size:1.15rem; color:var(--clay);
+  }
+  .article-body ul, .article-body ol{margin:0 0 22px; padding-left:22px;}
+  .article-body li{margin-bottom:10px;}
+  .divider{border:none; border-top:1px solid var(--line); margin:42px 0;}
+  .share-row{margin-top:48px; padding-top:24px; border-top:1px solid var(--line); display:flex; align-items:center; gap:14px;}
+  .share-row span{font-size:0.85rem; font-weight:600; color:var(--clay);}
+  .share-row a{width:36px; height:36px; border-radius:50%; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; color:var(--forest);}
+  .share-row a:hover{background:var(--forest); color:#fff; border-color:var(--forest);}
+
+  /* PILLAR LIST (menu-vegetal page) */
+  .pillar-list{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:28px 0 36px;}
+  .pillar-list .item{background:var(--sand); border-radius:14px; padding:22px; border:1px solid var(--line);}
+  .pillar-list .item h4{font-size:1rem; color:var(--forest); margin-bottom:8px;}
+  .pillar-list .item p{margin:0; font-size:0.92rem; color:#5a3d4a;}
+  .numbered{counter-reset:step; margin:28px 0 36px; display:flex; flex-direction:column; gap:18px;}
+  .numbered .step{display:flex; gap:18px; align-items:flex-start;}
+  .numbered .num-circle{
+    flex:none; width:38px;height:38px;border-radius:50%; background:var(--forest); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:600;
+  }
+  .numbered .step-text strong{display:block; color:var(--forest); margin-bottom:4px;}
+  .numbered .step-text p{margin:0; color:#5a3d4a; font-size:0.95rem;}
+  .cta-box{
+    margin-top:40px; background:var(--forest); color:#fff; border-radius:20px; padding:38px 32px; text-align:center;
+  }
+  .cta-box h3{color:#fff; font-size:1.4rem; margin-bottom:10px;}
+  .cta-box p{color:rgba(255,255,255,0.85); margin-bottom:22px;}
+  .cta-box .btn{background:#fff; color:var(--forest);}
+  .cta-box .btn:hover{background:var(--sand);}
+
+  /* FOOTER */
+  footer{background:var(--forest); color:rgba(255,255,255,0.85); padding:64px 0 28px;}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px;}
+  .foot-brand{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; color:#fff; font-size:1.1rem; font-weight:600;}
+  .foot-brand .mark{width:32px;height:32px;border-radius:50%; object-fit:cover; background:rgba(255,255,255,0.15);}
+  .foot-grid p.tag{margin-top:16px; font-size:0.9rem; max-width:34ch; color:rgba(255,255,255,0.65);}
+  .foot-col h4{color:#fff; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:16px; font-family:'Inter',sans-serif; font-weight:600;}
+  .foot-col a{display:block; font-size:0.92rem; margin-bottom:11px; color:rgba(255,255,255,0.75); transition:color .2s;}
+  .foot-col a:hover{color:#fff;}
+  .social-row{display:flex; gap:12px; margin-top:18px;}
+  .social-row a{width:38px;height:38px;border-radius:50%; border:1px solid rgba(255,255,255,0.3); display:flex; align-items:center; justify-content:center; font-size:0.85rem;}
+  .social-row a:hover{background:#fff; color:var(--forest);}
+  .foot-bottom{max-width:var(--maxw); margin:48px auto 0; padding:24px 28px 0; border-top:1px solid rgba(255,255,255,0.18); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:0.82rem; color:rgba(255,255,255,0.6);}
+  .foot-bottom a{text-decoration:underline;}
+
+  @media (max-width: 980px){
+    nav.links{display:none;}
+    .pillar-list{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr 1fr; row-gap:36px;}
+  }
+  @media (max-width: 620px){
+    .wrap, .article-wrap{padding-left:20px; padding-right:20px;}
+    .foot-grid{grid-template-columns:1fr;}
+    .page{padding:44px 0 64px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#inicio" class="brand"><img class="mark" src="https://asociacionempatia.es/wp-content/uploads/2023/03/cropped-cropped-TOM-logo-Empatia-85x85.png" alt="Logo Asociación Empatía"> Empatía</a>
+    <nav class="links">
+      <a href="https://asociacionempatia.es/">Inicio</a>
+      <a href="https://asociacionempatia.es/quienes-somos/">Conócenos</a>
+      <a href="https://asociacionempatia.es/colabora/">Colabora</a>
+      <a href="https://asociacionempatia.es/noticias/">Noticias</a>
+      <a href="https://asociacionempatia.es/contacto/">Contacto</a>
+    </nav>
+    <a href="https://asociacionempatia.es/asociate/" class="btn btn-primary">Hazte socio</a>
+  </div>
+</header>
+
+<!-- ===================== PÁGINA 1 ===================== -->
+<article class="page" id="publicidad-carne">
+  <div class="article-wrap">
+    <span class="tag-pill">Noticias · Veganismo</span>
+    <h1>Prohibir la publicidad de la carne: éticamente necesario, pero ¿suficiente?</h1>
+    <p class="meta">Asociación Empatía</p>
+
+    <div class="hero-img">
+      <img src="https://i0.wp.com/asociacionempatia.es/wp-content/uploads/2026/05/prohibicion-de-carne-en-la-publicidad.png?fit=900%2C660&ssl=1" alt="Prohibición de carne en la publicidad">
+    </div>
+
+    <div class="article-body">
+      <p>El 2026, el Ayuntamiento de Ámsterdam, impulsado por el partido ecologista <em>GroenLinks</em> y <em>Partij voor de Dieren – PvdD</em> (Partido por los Animales), aprobó una medida sin precedentes en Europa: prohibir la publicidad de carne en el espacio público de la ciudad. La justificación fue clara: reducir el impacto climático de la ganadería industrial y ser coherentes con los compromisos de sostenibilidad municipales. Así, marquesinas, vallas y transporte público dejaron de poder albergar anuncios de productos cárnicos. Pero hay una pregunta incómoda que merece ser formulada con honestidad: ¿va a funcionar?</p>
+      <p>La respuesta corta es: probablemente no si se queda aquí.</p>
+
+      <h2>Una medida éticamente impecable</h2>
+      <p>Antes de entrar en el debate sobre la eficacia, conviene dejar algo claro: retirar del espacio público la promoción de una industria que causa sufrimiento masivo a animales sintientes, que es uno de los principales motores del cambio climático, y que genera enormes costes sanitarios y medioambientales que pagamos entre todos, es éticamente correcto.</p>
+      <p>El espacio público es un bien común. Que ese bien común haya servido durante décadas para que la industria cárnica normalice y glamurice sus productos —a menudo sin mostrar nada de lo que ocurre realmente en las granjas industriales— es algo que merece ser cuestionado. Ámsterdam ha tenido el valor de hacerlo.</p>
+      <p>Pero la ética no es lo mismo que la eficacia. Y aquí empieza el problema.</p>
+
+      <h2>La paradoja del smartphone</h2>
+      <figure>
+        <img src="https://i0.wp.com/asociacionempatia.es/wp-content/uploads/2026/05/smartphone-con-publicidad-de-hamburguesa.png?resize=900%2C492&ssl=1" alt="Smartphone con publicidad de hamburguesa">
+      </figure>
+      <p>Cuando se anunció la medida, el debate público se centró en si era o no una restricción a la libertad de expresión comercial. Lo que se discutió menos es lo que apuntó el director de la ANVR (Asociación General Neerlandesa de Empresas de Viaje) <a href="https://www.bbc.com/audio/play/w3ct98rv" target="_blank" rel="noopener">en una entrevista reciente en la BBC</a>: que el dinero que la industria cárnica destinaba a publicidad en el espacio público no va a desaparecer. Va a trasladarse.</p>
+      <p>Y adónde va a ir es fácil de predecir: a los smartphones. A las redes sociales. A los algoritmos que saben exactamente a quién mostrar qué anuncio, en qué momento, con qué mensaje.</p>
+      <p>La paradoja es que la prohibición podría resultar contraproducente. Antes, una persona que caminaba por la calle podía ignorar una marquesina mirando al móvil —y de hecho, eso es exactamente lo que hace la mayoría. Después de la prohibición, esa misma persona encontrará los anuncios de carne directamente en ese móvil que antes usaba para esquivar la publicidad exterior. Con una diferencia crucial: los anuncios en redes sociales son hiperpersonalizados, interactivos y diseñados para generar engagement. Son, en todos los sentidos, más efectivos que una marquesina.</p>
+      <p>La industria, además, no ha esperado a que la regulación la empuje. Ya lleva años invirtiendo masivamente en redes sociales, en influencers, en contenido patrocinado que no siempre se identifica claramente como publicidad. La prohibición en el espacio físico puede acelerar una migración que ya estaba en marcha.</p>
+
+      <h2>¿Hay razones para el optimismo?</h2>
+      <p>Sí, aunque con matices. Joreintje Mackenbach, profesora asociada de Epidemiología y Ciencia de Datos en el UMC de Ámsterdam, señala que hay evidencias de que este tipo de restricciones puede generar cambios reales de comportamiento. El caso del tabaco es el más estudiado: la prohibición progresiva de la publicidad en distintos países se asoció a reducciones en el consumo, especialmente entre los jóvenes.</p>
+      <blockquote>Una sociedad que decide que ciertos productos no merecen ser promovidos en el espacio común está diciendo algo sobre sus valores colectivos.</blockquote>
+      <p>El problema es que «simbólico» no es suficiente cuando hablamos de una crisis climática con plazos concretos y de millones de animales que sufren cada día en granjas industriales.</p>
+
+      <h2>El siguiente paso: que la gente decida con información real</h2>
+      <figure>
+        <img src="https://i0.wp.com/asociacionempatia.es/wp-content/uploads/2026/05/foto-de-cajas-de-tabaco-con-sus-etiquetados.png?resize=900%2C492&ssl=1" alt="Cajas de tabaco con sus etiquetados">
+      </figure>
+      <p>La derecha suele responder a estas medidas con el argumento del libre albedrío: la gente tiene derecho a decidir qué come. Es un argumento que merece ser tomado en serio, pero también respondido con seriedad.</p>
+      <p>¿Qué tipo de libertad es la de quien decide sin información completa? La publicidad de la industria cárnica muestra vacas felices en prados verdes, familias reunidas alrededor de una barbacoa, productos que evocan tradición y bienestar. No muestra las granjas industriales, las condiciones de vida de los animales, el impacto ambiental de cada filete, ni los antibióticos que se usan de forma masiva y que contribuyen a la resistencia bacteriana.</p>
+      <p>Si el argumento es la libertad de elección, que sea una elección real. Y para eso hace falta información veraz, completa y visible. El modelo del tabaco vuelve a ser relevante: no solo se prohibió la publicidad, sino que se obligó a incluir advertencias sanitarias con imágenes explícitas en los propios paquetes. El resultado fue una caída sostenida del consumo en todos los países que lo aplicaron.</p>
+      <p>Aplicar una lógica similar a los productos cárnicos —etiquetado obligatorio con información sobre el impacto ambiental, el bienestar animal y la huella de carbono— sería el complemento lógico y necesario a la prohibición publicitaria. No para manipular, sino para lo contrario: para que la decisión del consumidor sea verdaderamente libre e informada.</p>
+
+      <h2>Un primer paso real, no un punto de llegada</h2>
+      <p>La prohibición de publicidad de carne en Ámsterdam es histórica. Merece ser reconocida como lo que es: un primer paso valiente en la dirección correcta, que abre una conversación que el resto de Europa tarde o temprano tendrá que dar.</p>
+      <p>Pero si se queda ahí, corre el riesgo de convertirse en un gesto bienintencionado que la industria absorbe sin dificultad, simplemente reorientando sus presupuestos hacia canales donde nadie la puede regular todavía, o donde la regulación llega con décadas de retraso.</p>
+      <p>El camino que ha abierto Ámsterdam necesita continuación: regulación de la publicidad digital, etiquetado honesto, y una conversación pública que no eluda la pregunta de fondo. No se trata de prohibir que la gente coma carne. Se trata de que, si lo hace, lo haga sabiendo exactamente qué está eligiendo.</p>
+      <p><strong>Eso sí sería libertad.</strong></p>
+    </div>
+
+    <div class="share-row">
+      <span>Comparte:</span>
+      <a href="#" aria-label="X">X</a>
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="WhatsApp">wa</a>
+      <a href="#" aria-label="Telegram">tg</a>
+    </div>
+  </div>
+</article>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img class="mark" src="https://asociacionempatia.es/wp-content/uploads/2023/03/TOM-logo-Empatia-BN.png" alt="Logo Empatía"> Empatía</div>
+        <p class="tag">Trabajamos por el desarrollo de la empatía, el conocimiento y la compasión hacia los animales.</p>
+        <div class="social-row">
+          <a href="https://www.facebook.com/profile.php?id=100092046226697" aria-label="Facebook">f</a>
+          <a href="https://twitter.com/Empatia_es" aria-label="Twitter">x</a>
+          <a href="https://instagram.com/empatia_es" aria-label="Instagram">ig</a>
+          <a href="https://www.youtube.com/@Empatiaes" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Asociación</h4>
+        <a href="https://asociacionempatia.es/quienes-somos/">Conócenos</a>
+        <a href="https://asociacionempatia.es/colabora/">Colabora</a>
+        <a href="https://asociacionempatia.es/noticias/">Noticias</a>
+        <a href="https://asociacionempatia.es/art/">Artículos</a>
+      </div>
+      <div class="foot-col">
+        <h4>Participa</h4>
+        <a href="https://asociacionempatia.es/firmas/">Firma</a>
+        <a href="https://asociacionempatia.es/colabora/denuncia-el-maltrato-animal/">Denuncia maltrato animal</a>
+        <a href="https://asociacionempatia.es/asociate/">Asóciate</a>
+        <a href="https://asociacionempatia.es/colabora/testamento-solidario/">Testamento solidario</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <a href="mailto:hola@asociacionempatia.es">hola@asociacionempatia.es</a>
+        <a href="https://api.whatsapp.com/send?phone=%2B34604910719">WhatsApp</a>
+        <a href="https://asociacionempatia.es/inicio/politica-de-privacidad-2/">Política de privacidad</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>La Asociación Empatía está inscrita en el Registro Nacional de Asociaciones, Sección 1ª, nº 597537.</span>
+      <span>© 2026 Empatía</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
