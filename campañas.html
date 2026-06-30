@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuestras Campañas — Asociación Empatía</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --forest:#C8174E; --cream:#FFFFFF; --sand:#FFF0F5; --clay:#A30E3E; --ink:#2B1620; --line: rgba(200,23,78,0.14); --radius: 18px; --maxw: 1180px; }
+  *{box-sizing:border-box;} body{margin:0; font-family:'Inter',sans-serif; color:var(--ink); background:var(--cream); line-height:1.6;}
+  h1,h2,h3{font-family:'Fraunces',serif; margin:0; color:var(--forest);} a{color:inherit; text-decoration:none;} img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  
+  /* HEADER */
+  header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:var(--maxw); margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-weight:600; font-size:1.15rem; color:var(--forest);}
+  .brand .mark{width:36px; height:36px; border-radius:50%; object-fit:cover; background:var(--sand);}
+  nav.links{display:flex; gap:26px; align-items:center;} nav.links a{font-size:0.9rem; font-weight:500; color:var(--forest); opacity:0.85;}
+  .btn{display:inline-flex; align-items:center; padding:11px 22px; border-radius:999px; font-weight:600; font-size:0.9rem; background:var(--forest); color:#fff;}
+  
+  /* CAMPAIGNS HERO */
+  .page-head{text-align:center; padding:80px 0 40px;}
+  .page-head h1{font-size:clamp(2.2rem, 4vw, 3.2rem);}
+  .page-head p{font-size:1.1rem; color:#666; max-width:600px; margin:16px auto 0;}
+
+  /* CAMPAIGNS GRID */
+  .camp-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:30px; padding-bottom:100px;}
+  .camp-card{background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; transition:transform 0.2s;}
+  .camp-card:hover{transform:translateY(-5px); box-shadow:0 15px 30px rgba(0,0,0,0.06);}
+  .img-wrap{aspect-ratio:16/10; overflow:hidden;}
+  .img-wrap img{width:100%; height:100%; object-fit:cover;}
+  .camp-body{padding:24px;}
+  .camp-body h3{font-size:1.3rem; margin-bottom:10px;}
+  .camp-body p{font-size:0.95rem; color:#555; margin-bottom:20px;}
+  .read-more{font-weight:600; color:var(--clay); font-size:0.9rem; text-decoration:underline; text-underline-offset:4px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand"><img class="mark" src="img/LogoEmpatiaRosa.png" alt="Logo Empatía"> Empatía</a>
+    <nav class="links">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#conocenos">Conócenos</a>
+      <a href="colabora.html">Colabora</a>
+      <a href="index.html#noticias">Noticias</a>
+    </nav>
+    <a href="index.html#dona" class="btn">Hazte socio</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <h1>Nuestras Campañas</h1>
+    <p>Acciones estratégicas e institucionales para conseguir cambios reales y duraderos para los animales.</p>
+  </div>
+
+  <div class="camp-grid">
+    <!-- Enlazado a tu archivo menu-vegetal.html -->
+    <article class="camp-card">
+      <div class="img-wrap"><img src="img/niños.jpg" alt="Alimentando el futuro"></div>
+      <div class="camp-body">
+        <h3>Alimentando el futuro</h3>
+        <p>Talleres e información para conseguir la implementación de menús 100% vegetales en comedores escolares, universidades e instituciones.</p>
+        <a href="menu-vegetal.html" class="read-more">Ver campaña completa</a>
+      </div>
+    </article>
+
+    <!-- Enlazado a tu archivo publicidad-carne.html -->
+    <article class="camp-card">
+      <div class="img-wrap"><img src="img/Prohibircarne.jpg" alt="La publicidad de la carne"></div>
+      <div class="camp-body">
+        <h3>Stop publicidad de carne</h3>
+        <p>Trabajamos para prohibir la publicidad de productos de origen animal en espacios públicos, tal y como se hace con el tabaco o el alcohol.</p>
+        <a href="publicidad-carne.html" class="read-more">Ver campaña completa</a>
+      </div>
+    </article>
+
+    <!-- Enlazado a tu archivo empatia-universidades.html -->
+    <article class="camp-card">
+      <div class="img-wrap"><img src="img/AnimalesPublicidad.jpg" alt="Empatía Universidades"></div>
+      <div class="camp-body">
+        <h3>Empatía en la Universidad</h3>
+        <p>Llevamos el debate ético y el antiespecismo a las aulas universitarias para formar a las futuras generaciones de profesionales.</p>
+        <a href="empatia-universidades.html" class="read-more">Ver campaña completa</a>
+      </div>
+    </article>
+  </div>
+</main>
+
+</body>
+</html>
