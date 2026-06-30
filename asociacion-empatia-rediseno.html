@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asociación Empatía — La razón al servicio de los animales</title>
+<meta name="description" content="Visibilizamos el origen de la explotación y el maltrato animal, proponemos soluciones efectivas y trabajamos para hacerlas realidad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#C8174E;
+    --forest-soft:#E54C82;
+    --cream:#FFFFFF;
+    --sand:#FFF0F5;
+    --amber:#FF6FA0;
+    --clay:#A30E3E;
+    --ink:#2B1620;
+    --line: rgba(200,23,78,0.14);
+    --radius: 18px;
+    --maxw: 1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces',serif;
+    margin:0;
+    color:var(--forest);
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    text-transform:uppercase;
+    font-size:0.74rem;
+    letter-spacing:0.16em;
+    font-weight:600;
+    color:var(--clay);
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* ===== HEADER ===== */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,247,238,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 28px; max-width:var(--maxw); margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-weight:600; font-size:1.15rem; color:var(--forest);}
+  .brand .mark{
+    width:36px;height:36px;border-radius:50%;
+    object-fit:cover; background:var(--sand);
+  }
+  nav.links{display:flex; gap:30px; align-items:center;}
+  nav.links a{font-size:0.93rem; font-weight:500; color:var(--forest); opacity:0.85; transition:opacity .2s;}
+  nav.links a:hover{opacity:1;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:11px 22px; border-radius:999px; font-weight:600; font-size:0.9rem;
+    border:1px solid transparent; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .btn-primary{background:var(--forest); color:var(--cream);}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(28,46,34,0.25);}
+  .btn-ghost{border-color:var(--forest); color:var(--forest);}
+  .btn-ghost:hover{background:var(--forest); color:var(--cream);}
+  .menu-toggle{display:none; background:none; border:none; font-size:1.5rem; cursor:pointer; color:var(--forest);}
+
+  /* ===== HERO ===== */
+  .hero{position:relative; overflow:hidden;}
+  .hero-grid{
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:48px; align-items:center;
+    padding:72px 28px 88px; max-width:var(--maxw); margin:0 auto;
+  }
+  .hero h1{font-size:clamp(2.4rem, 4.6vw, 3.8rem); line-height:1.05; font-weight:500;}
+  .hero h1 em{font-style:italic; color:var(--clay);}
+  .hero p.lead{margin-top:20px; font-size:1.08rem; max-width:46ch; color:var(--forest-soft);}
+  .hero .cta-row{margin-top:32px; display:flex; gap:16px; flex-wrap:wrap;}
+  .hero-media{position:relative; border-radius:24px; overflow:hidden; aspect-ratio:4/3.1;}
+  .hero-media img{width:100%; height:100%; object-fit:cover;}
+  .hero-media::after{
+    content:"";position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(28,46,34,0) 45%, rgba(28,46,34,0.55) 100%);
+  }
+  .hero-quote{
+    position:absolute; left:24px; right:24px; bottom:22px; color:#fff; z-index:2;
+    font-family:'Fraunces',serif; font-size:1.05rem; font-style:italic; line-height:1.4;
+  }
+  .blob{
+    position:absolute; border-radius:50%; filter:blur(60px); opacity:0.35; z-index:0;
+  }
+  .blob1{width:420px;height:420px; background:var(--amber); top:-160px; right:-120px;}
+  .blob2{width:300px;height:300px; background:var(--clay); bottom:-140px; left:-100px;}
+
+  /* ===== MANIFESTO BAND ===== */
+  .manifesto{
+    background:var(--forest); color:var(--cream); padding:64px 28px;
+  }
+  .manifesto blockquote{
+    max-width:880px; margin:0 auto; font-family:'Fraunces',serif;
+    font-size:clamp(1.5rem, 3vw, 2.2rem); font-weight:300; line-height:1.35; text-align:center;
+  }
+  .manifesto blockquote strong{font-weight:600;}
+
+  /* ===== NEWS ===== */
+  section{padding:84px 0;}
+  .section-head{display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:42px; flex-wrap:wrap; gap:16px;}
+  .section-head h2{font-size:clamp(1.7rem, 3vw, 2.3rem); font-weight:500;}
+  .news-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:28px;}
+  .news-card{
+    background:#fff; border-radius:var(--radius); overflow:hidden;
+    border:1px solid var(--line); display:flex; flex-direction:column;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .news-card:hover{transform:translateY(-6px); box-shadow:0 18px 40px rgba(28,46,34,0.14);}
+  .news-card .img-wrap{aspect-ratio:4/3; overflow:hidden; background:var(--sand);}
+  .news-card img{width:100%; height:100%; object-fit:cover; transition:transform .5s ease;}
+  .news-card:hover img{transform:scale(1.06);}
+  .news-body{padding:22px 22px 26px; display:flex; flex-direction:column; gap:10px; flex:1;}
+  .news-body h3{font-size:1.18rem; font-weight:600;}
+  .news-body p{margin:0; color:var(--forest-soft); font-size:0.95rem; flex:1;}
+  .read-link{font-weight:600; font-size:0.88rem; color:var(--clay); display:inline-flex; align-items:center; gap:6px; margin-top:4px;}
+  .read-link .arrow{transition:transform .2s ease;}
+  .news-card:hover .arrow{transform:translateX(4px);}
+
+  /* ===== PILLARS ===== */
+  .pillars{background:var(--sand);}
+  .pillar-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .pillar{
+    background:var(--cream); border-radius:var(--radius); padding:34px 28px;
+    border:1px solid var(--line);
+  }
+  .pillar .num{font-family:'Fraunces',serif; font-size:0.85rem; color:var(--clay); font-weight:600;}
+  .pillar h3{margin-top:14px; font-size:1.3rem;}
+  .pillar p{color:var(--forest-soft); font-size:0.95rem; margin-top:10px;}
+  .pillar a{display:inline-block; margin-top:16px; font-weight:600; font-size:0.88rem; color:var(--forest); border-bottom:1.5px solid var(--amber);}
+
+  /* ===== DONATE ===== */
+  .donate{
+    background:var(--forest); color:var(--cream); border-radius:32px;
+    margin:0 28px; padding:64px 40px;
+  }
+  .donate-inner{max-width:var(--maxw); margin:0 auto;}
+  .donate-head{max-width:640px;}
+  .donate-head .eyebrow{color:var(--amber);}
+  .donate-head h2{color:var(--cream); font-size:clamp(1.7rem,3vw,2.3rem); font-weight:500; margin-top:10px;}
+  .donate-head p{margin-top:14px; color:rgba(251,247,238,0.78);}
+  .amount-row{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:40px;}
+  .amount-card{
+    background:rgba(251,247,238,0.06); border:1px solid rgba(251,247,238,0.18);
+    border-radius:18px; padding:28px 18px; text-align:center; transition:all .22s ease;
+  }
+  .amount-card:hover{background:rgba(251,247,238,0.12); border-color:var(--amber); transform:translateY(-4px);}
+  .amount-card .amt{font-family:'Fraunces',serif; font-size:1.9rem; font-weight:600;}
+  .amount-card .freq{font-size:0.78rem; opacity:0.65; margin-top:2px;}
+  .amount-card .btn{margin-top:18px; width:100%; justify-content:center; background:#FFFFFF; color:var(--forest); border:none;}
+  .amount-card .btn:hover{background:var(--sand);}
+
+  /* ===== QUICK LINKS ===== */
+  .quicklinks{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .qcard{
+    position:relative; border-radius:var(--radius); overflow:hidden; aspect-ratio:16/10;
+    display:flex; align-items:flex-end; padding:24px;
+  }
+  .qcard img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;}
+  .qcard::after{content:"";position:absolute; inset:0; background:linear-gradient(180deg, rgba(28,46,34,0) 30%, rgba(20,30,22,0.78) 100%); z-index:1;}
+  .qcard span{position:relative; z-index:2; color:#fff; font-family:'Fraunces',serif; font-size:1.3rem; font-weight:600;}
+  .qcard{transition:transform .25s ease;}
+  .qcard:hover{transform:translateY(-4px);}
+
+  /* ===== NEWSLETTER ===== */
+  .newsletter{
+    background:var(--sand); border-radius:28px; margin:0 28px; padding:56px 40px;
+    display:grid; grid-template-columns:1fr auto; gap:32px; align-items:center;
+  }
+  .newsletter h2{font-size:1.6rem; font-weight:500;}
+  .newsletter p{margin-top:8px; color:var(--forest-soft); max-width:48ch;}
+  .nform{display:flex; gap:10px;}
+  .nform input{
+    padding:13px 18px; border-radius:999px; border:1.5px solid var(--line);
+    font-family:'Inter',sans-serif; font-size:0.95rem; min-width:240px; background:#fff;
+  }
+  .nform input:focus{outline:2px solid var(--forest); outline-offset:2px;}
+
+  /* ===== IMPACT STRIP ===== */
+  .impact-strip{
+    position:relative; min-height:340px; display:flex; align-items:center;
+    border-radius:32px; overflow:hidden; margin:0 28px;
+  }
+  .impact-strip img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+  .impact-strip::after{content:"";position:absolute; inset:0; background:linear-gradient(90deg, rgba(28,46,34,0.92) 0%, rgba(28,46,34,0.55) 55%, rgba(28,46,34,0.15) 100%);}
+  .impact-content{position:relative; z-index:2; color:var(--cream); padding:50px 56px; max-width:520px;}
+  .impact-content .eyebrow{color:var(--amber);}
+  .impact-content h2{color:var(--cream); margin-top:10px; font-size:clamp(1.6rem,2.6vw,2.1rem); font-weight:500;}
+  .impact-content .btn{margin-top:24px;}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--forest); color:rgba(251,247,238,0.82); margin-top:88px; padding:64px 0 28px;}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px;}
+  .foot-brand{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; color:var(--cream); font-size:1.1rem; font-weight:600;}
+  .foot-brand .mark{width:32px;height:32px;border-radius:50%; object-fit:cover; background:rgba(255,255,255,0.15);}
+  .foot-grid p.tag{margin-top:16px; font-size:0.9rem; max-width:34ch; color:rgba(251,247,238,0.65);}
+  .foot-col h4{color:var(--cream); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:16px; font-family:'Inter',sans-serif; font-weight:600;}
+  .foot-col a{display:block; font-size:0.92rem; margin-bottom:11px; color:rgba(251,247,238,0.75); transition:color .2s;}
+  .foot-col a:hover{color:var(--amber);}
+  .social-row{display:flex; gap:12px; margin-top:18px;}
+  .social-row a{
+    width:38px;height:38px;border-radius:50%; border:1px solid rgba(251,247,238,0.25);
+    display:flex; align-items:center; justify-content:center; font-size:0.85rem;
+  }
+  .social-row a:hover{background:var(--amber); border-color:var(--amber); color:var(--forest);}
+  .foot-bottom{
+    max-width:var(--maxw); margin:48px auto 0; padding:24px 28px 0; border-top:1px solid rgba(251,247,238,0.15);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:0.82rem; color:rgba(251,247,238,0.55);
+  }
+  .foot-bottom a{text-decoration:underline;}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 980px){
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+    .hero-grid{grid-template-columns:1fr; padding-top:48px;}
+    .news-grid, .pillar-grid, .quicklinks{grid-template-columns:1fr 1fr;}
+    .foot-grid{grid-template-columns:1fr 1fr; row-gap:36px;}
+    .amount-row{grid-template-columns:1fr 1fr;}
+    .newsletter{grid-template-columns:1fr;}
+    .impact-content{padding:40px 28px;}
+  }
+  @media (max-width: 620px){
+    .wrap, .hero-grid{padding-left:20px; padding-right:20px;}
+    .news-grid, .pillar-grid, .quicklinks, .amount-row, .foot-grid{grid-template-columns:1fr;}
+    .donate, .newsletter, .impact-strip{margin:0 16px; border-radius:22px;}
+    .nform{flex-direction:column;}
+    .nform input{min-width:0;}
+    section{padding:56px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#" class="brand"><img class="mark" src="https://asociacionempatia.es/wp-content/uploads/2023/03/cropped-cropped-TOM-logo-Empatia-85x85.png" alt="Logo Asociación Empatía"> Empatía</a>
+    <nav class="links">
+      <a href="#inicio">Inicio</a>
+      <a href="#conocenos">Conócenos</a>
+      <a href="#colabora">Colabora</a>
+      <a href="#noticias">Noticias</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <a href="#dona" class="btn btn-primary">Hazte socio</a>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">Asociación Empatía</p>
+      <h1>La razón al servicio de <em>los animales</em></h1>
+      <p class="lead">Trabajamos por los animales a través de la investigación, la concienciación y la denuncia del maltrato. Sin subvenciones públicas: solo con tu ayuda.</p>
+      <div class="cta-row">
+        <a href="#firma" class="btn btn-primary">Firma ahora</a>
+        <a href="#dona" class="btn btn-ghost">Hazte socio</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=900&q=80&auto=format&fit=crop" alt="Animal en un entorno natural">
+      <p class="hero-quote">«Construir una sociedad más justa empieza por mirar a los ojos a quien no tiene voz.»</p>
+    </div>
+  </div>
+</section>
+
+<div class="manifesto">
+  <blockquote>Visibilizamos el <strong>origen de la explotación y el maltrato animal</strong>, proponemos soluciones efectivas y trabajamos para hacerlas realidad.</blockquote>
+</div>
+
+<section id="noticias">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Sala de prensa</p>
+        <h2>Últimas noticias</h2>
+      </div>
+      <a href="#" class="btn btn-ghost">Ver todas</a>
+    </div>
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1556767576-5ec41e3239ea?w=700&q=80&auto=format&fit=crop" alt="Publicidad de carne"></div>
+        <div class="news-body">
+          <h3>La publicidad de la carne</h3>
+          <p>Ámsterdam aprobó prohibir la publicidad de carne en el espacio público de la ciudad. Éticamente necesario, ¿pero suficiente?</p>
+          <a href="#" class="read-link">Leer <span class="arrow">→</span></a>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=700&q=80&auto=format&fit=crop" alt="Empatía en la universidad"></div>
+        <div class="news-body">
+          <h3>Empatía en la Universidad</h3>
+          <p>Comenzamos un ciclo para llevar la empatía a las universidades. Actívate por los animales en tu campus.</p>
+          <a href="#" class="read-link">Leer <span class="arrow">→</span></a>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=700&q=80&auto=format&fit=crop" alt="Comedor escolar"></div>
+        <div class="news-body">
+          <h3>Alimentando el futuro</h3>
+          <p>Empatía lleva a cabo talleres de información para conseguir platos 100% vegetales en diferentes instituciones.</p>
+          <a href="#" class="read-link">Leer <span class="arrow">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="pillars" id="colabora">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Cómo ayudamos</p>
+        <h2>Tres formas de actuar</h2>
+      </div>
+    </div>
+    <div class="pillar-grid">
+      <div class="pillar">
+        <p class="num">Investigación</p>
+        <h3>Conócenos</h3>
+        <p>Quiénes somos, qué nos mueve y cómo trabajamos por el desarrollo de la empatía y la compasión.</p>
+        <a href="#conocenos">Saber más</a>
+      </div>
+      <div class="pillar">
+        <p class="num">Acción</p>
+        <h3>Campañas</h3>
+        <p>Iniciativas activas para visibilizar el maltrato y proponer alternativas reales y efectivas.</p>
+        <a href="#">Ver campañas</a>
+      </div>
+      <div class="pillar">
+        <p class="num">Comunidad</p>
+        <h3>Colabora</h3>
+        <p>Firma, denuncia el maltrato animal, asóciate o dona: cada gesto suma para los que no tienen voz.</p>
+        <a href="#dona">Quiero colaborar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dona">
+  <div class="wrap">
+    <div class="donate">
+      <div class="donate-inner">
+        <div class="donate-head">
+          <p class="eyebrow">Ayúdanos a seguir</p>
+          <h2>Un mundo más empático con los animales</h2>
+          <p>No recibimos ayudas públicas ni subvenciones. Solo contamos con tu ayuda para seguir. Te necesitamos.</p>
+        </div>
+        <div class="amount-row">
+          <div class="amount-card">
+            <div class="amt">9€</div>
+            <div class="freq">al mes</div>
+            <a href="https://donate.stripe.com/5kA3cC4Wf7oDgOA5kl" class="btn">Dona</a>
+          </div>
+          <div class="amount-card">
+            <div class="amt">20€</div>
+            <div class="freq">al mes</div>
+            <a href="https://donate.stripe.com/8wM9B09cvaAP69W002" class="btn">Dona</a>
+          </div>
+          <div class="amount-card">
+            <div class="amt">50€</div>
+            <div class="freq">al mes</div>
+            <a href="https://donate.stripe.com/fZe5kKagz9wLcyk3cf" class="btn">Dona</a>
+          </div>
+          <div class="amount-card">
+            <div class="amt">Otro</div>
+            <div class="freq">tú eliges</div>
+            <a href="https://buy.stripe.com/6oEeVkgEXgZd55S3cc" class="btn">Dona</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="conocenos">
+  <div class="wrap">
+    <div class="quicklinks">
+      <a class="qcard" href="#conocenos">
+        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&q=80&auto=format&fit=crop" alt="Conócenos">
+        <span>Conócenos</span>
+      </a>
+      <a class="qcard" href="#">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=80&auto=format&fit=crop" alt="Campañas">
+        <span>Campañas</span>
+      </a>
+      <a class="qcard" href="#colabora">
+        <img src="https://images.unsplash.com/photo-1444212477490-ca407925329e?w=600&q=80&auto=format&fit=crop" alt="Colabora">
+        <span>Colabora</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="impact-strip">
+      <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=1400&q=80&auto=format&fit=crop" alt="Cerdo en una granja">
+      <div class="impact-content">
+        <p class="eyebrow">¿Quieres ayudarles?</p>
+        <h2>Ayúdanos a recaudar fondos para trabajar por los animales</h2>
+        <a href="#dona" class="btn btn-primary">Dona ahora</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="newsletter">
+      <div>
+        <h2>Únete a la comunidad Empática</h2>
+        <p>Suscríbete al boletín para mantenerte al día de nuestras actividades y formas de participar.</p>
+      </div>
+      <form class="nform" onsubmit="return false;">
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit" class="btn btn-primary">Unirme</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img class="mark" src="https://asociacionempatia.es/wp-content/uploads/2023/03/TOM-logo-Empatia-BN.png" alt="Logo Empatía"> Empatía</div>
+        <p class="tag">Trabajamos por el desarrollo de la empatía, el conocimiento y la compasión hacia los animales.</p>
+        <div class="social-row">
+          <a href="https://www.facebook.com/profile.php?id=100092046226697" aria-label="Facebook">f</a>
+          <a href="https://twitter.com/Empatia_es" aria-label="Twitter">x</a>
+          <a href="https://instagram.com/empatia_es" aria-label="Instagram">ig</a>
+          <a href="https://www.youtube.com/@Empatiaes" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Asociación</h4>
+        <a href="#conocenos">Conócenos</a>
+        <a href="#colabora">Colabora</a>
+        <a href="#noticias">Noticias</a>
+        <a href="#">Artículos</a>
+      </div>
+      <div class="foot-col">
+        <h4>Participa</h4>
+        <a href="#firma">Firma</a>
+        <a href="#">Denuncia maltrato animal</a>
+        <a href="#">Asóciate</a>
+        <a href="#">Testamento solidario</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <a href="mailto:hola@asociacionempatia.es">hola@asociacionempatia.es</a>
+        <a href="https://api.whatsapp.com/send?phone=%2B34604910719">WhatsApp</a>
+        <a href="#">Política de privacidad</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>La Asociación Empatía está inscrita en el Registro Nacional de Asociaciones, Sección 1ª, nº 597537.</span>
+      <span>© 2026 Empatía — <a href="#">Política de privacidad</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
