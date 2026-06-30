@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiénes Somos — Asociación Empatía</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --forest:#C8174E; --forest-soft:#E54C82; --cream:#FFFFFF; --sand:#FFF0F5; --amber:#FF6FA0; --clay:#A30E3E; --ink:#2B1620; --line: rgba(200,23,78,0.14); --radius: 18px; --maxw: 1180px; }
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0; font-family:'Inter',sans-serif; color:var(--ink); background:var(--cream); line-height:1.6; -webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Fraunces',serif; margin:0; color:var(--forest); font-weight:600;}
+  a{color:inherit; text-decoration:none;} img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  
+  /* HEADER */
+  header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:var(--maxw); margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-weight:600; font-size:1.15rem; color:var(--forest);}
+  .brand .mark{width:36px; height:36px; border-radius:50%; object-fit:cover; background:var(--sand);}
+  nav.links{display:flex; gap:26px; align-items:center;}
+  nav.links a{font-size:0.9rem; font-weight:500; color:var(--forest); opacity:0.85; transition:opacity .2s;}
+  nav.links a:hover{opacity:1;}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:11px 22px; border-radius:999px; font-weight:600; font-size:0.9rem; border:1px solid transparent; cursor:pointer; transition:transform .18s ease;}
+  .btn-primary{background:var(--forest); color:#fff;} .btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(200,23,78,0.25);}
+  
+  /* HERO SECTION */
+  .hero-about{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; padding:80px 0;}
+  .hero-text h1{font-size:clamp(2.5rem, 4vw, 3.5rem); line-height:1.1; margin-bottom:24px;}
+  .hero-text p{font-size:1.1rem; color:#4a2b38; margin-bottom:20px;}
+  .hero-img{border-radius:24px; overflow:hidden; aspect-ratio:4/3;}
+  .hero-img img{width:100%; height:100%; object-fit:cover;}
+
+  /* SUB-PAGES LINKS */
+  .sub-links-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:60px 0 80px;}
+  .sub-link-card{background:var(--sand); padding:32px; border-radius:var(--radius); border:1px solid var(--line); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; transition:transform 0.2s;}
+  .sub-link-card:hover{transform:translateY(-4px); background:#fce8ef;}
+  .sub-link-card h3{font-size:1.5rem; margin-bottom:12px;}
+  .sub-link-card span{font-weight:600; color:var(--clay); text-decoration:underline; text-underline-offset:4px;}
+
+  /* FOOTER */
+  footer{background:var(--forest); color:rgba(255,255,255,0.85); padding:64px 0 28px;}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px;}
+  .foot-brand{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; color:#fff; font-size:1.1rem; font-weight:600;}
+  .foot-brand .mark{width:32px;height:32px;border-radius:50%; object-fit:cover; background:rgba(255,255,255,0.15);}
+  .foot-grid p.tag{margin-top:16px; font-size:0.9rem; max-width:34ch; color:rgba(255,255,255,0.65);}
+  .foot-col h4{color:#fff; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:16px; font-family:'Inter',sans-serif; font-weight:600;}
+  .foot-col a{display:block; font-size:0.92rem; margin-bottom:11px; color:rgba(255,255,255,0.75); transition:color .2s;}
+  .foot-col a:hover{color:#fff;}
+  .foot-bottom{max-width:var(--maxw); margin:48px auto 0; padding:24px 28px 0; border-top:1px solid rgba(255,255,255,0.18); display:flex; justify-content:space-between; font-size:0.82rem; color:rgba(255,255,255,0.6);}
+  
+  @media(max-width: 768px) { .hero-about, .sub-links-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand"><img class="mark" src="img/LogoEmpatiaRosa.png" alt="Logo Empatía"> Empatía</a>
+    <nav class="links">
+      <a href="index.html">Inicio</a>
+      <a href="quienes-somos.html">Conócenos</a>
+      <a href="colabora.html">Colabora</a>
+      <a href="index.html#noticias">Noticias</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <a href="index.html#dona" class="btn btn-primary">Hazte socio</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero-about">
+    <div class="hero-text">
+      <h1>Nuestra historia y compromiso</h1>
+      <p>Somos una organización dedicada a transformar la relación de la sociedad con los animales. Dirigida por Silvia Barquero, Asociación Empatía trabaja incansablemente para visibilizar la realidad de la explotación animal y fomentar un marco de respeto ético y legal.</p>
+      <p>Creemos en el rigor, la investigación y la comunicación estratégica como herramientas fundamentales para generar un cambio cultural profundo a favor de los derechos de todos los seres sintientes.</p>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800&q=80&auto=format&fit=crop" alt="Equipo de Empatía">
+    </div>
+  </section>
+
+  <section class="sub-links-grid">
+    <a href="mision-vision.html" class="sub-link-card">
+      <h3>Misión, Visión y Valores</h3>
+      <p>Conoce los principios éticos y estratégicos que guían cada uno de nuestros pasos.</p>
+      <span>Leer más</span>
+    </a>
+    <a href="estatutos.html" class="sub-link-card">
+      <h3>Estatutos</h3>
+      <p>Transparencia legal y organizativa sobre nuestra constitución y fines fundacionales.</p>
+      <span>Ver estatutos</span>
+    </a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img class="mark" src="img/LogoEmpatiaBlanco.png" alt="Logo Empatía"> Empatía</div>
+        <p class="tag">Trabajamos por el desarrollo de la empatía, el conocimiento y la compasión hacia los animales.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Asociación</h4>
+        <a href="quienes-somos.html">Quiénes somos</a>
+        <a href="colabora.html">Colabora</a>
+        <a href="articulos.html">Artículos</a>
+      </div>
+      <div class="foot-col">
+        <h4>Participa</h4>
+        <a href="campanas.html">Campañas</a>
+        <a href="index.html#dona">Hazte socio</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <a href="mailto:hola@asociacionempatia.es">hola@asociacionempatia.es</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>La Asociación Empatía está inscrita en el Registro Nacional de Asociaciones, Sección 1ª, nº 597537.</span>
+      <span>© 2026 Empatía</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artículos y Reflexiones — Asociación Empatía</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --forest:#C8174E; --cream:#FFFFFF; --sand:#FFF0F5; --clay:#A30E3E; --ink:#2B1620; --line: rgba(200,23,78,0.14); --radius: 18px; --maxw: 1180px; }
+  *{box-sizing:border-box;} body{margin:0; font-family:'Inter',sans-serif; color:var(--ink); background:var(--cream); line-height:1.6;}
+  h1,h2,h3{font-family:'Fraunces',serif; margin:0; color:var(--forest);} a{color:inherit; text-decoration:none;} img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  
+  /* HEADER */
+  header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:var(--maxw); margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-weight:600; font-size:1.15rem; color:var(--forest);}
+  .brand .mark{width:36px; height:36px; border-radius:50%; object-fit:cover; background:var(--sand);}
+  nav.links{display:flex; gap:26px; align-items:center;} nav.links a{font-size:0.9rem; font-weight:500; color:var(--forest); opacity:0.85;}
+  .btn{display:inline-flex; align-items:center; padding:11px 22px; border-radius:999px; font-weight:600; font-size:0.9rem; background:var(--forest); color:#fff;}
+  
+  /* ARTICLES HEADER */
+  .page-head{text-align:center; padding:80px 0 60px;}
+  .page-head h1{font-size:clamp(2.2rem, 4vw, 3.2rem);}
+  .page-head p{font-size:1.1rem; color:#666; max-width:600px; margin:16px auto 0;}
+
+  /* ARTICLES GRID */
+  .art-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:40px; padding-bottom:100px;}
+  .art-card{display:flex; flex-direction:column; gap:16px; transition:transform 0.2s;}
+  .art-card:hover{transform:translateY(-4px);}
+  .art-img{aspect-ratio:4/3; border-radius:var(--radius); overflow:hidden; border:1px solid var(--line);}
+  .art-img img{width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease;}
+  .art-card:hover .art-img img{transform:scale(1.04);}
+  .art-meta{font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--clay);}
+  .art-body h3{font-size:1.4rem; margin-bottom:10px; line-height:1.3;}
+  .art-body p{font-size:0.95rem; color:#555; margin-bottom:16px;}
+  .read-more{font-weight:600; color:var(--forest); font-size:0.9rem; border-bottom: 2px solid var(--sand);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand"><img class="mark" src="img/LogoEmpatiaRosa.png" alt="Logo Empatía"> Empatía</a>
+    <nav class="links">
+      <a href="index.html">Inicio</a>
+      <a href="quienes-somos.html">Conócenos</a>
+      <a href="colabora.html">Colabora</a>
+      <a href="articulos.html">Artículos</a>
+    </nav>
+    <a href="index.html#dona" class="btn">Hazte socio</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <h1>Artículos y Reflexiones</h1>
+    <p>Análisis, opinión y recursos sobre derechos animales, estrategias de concienciación y nuestro trabajo institucional.</p>
+  </div>
+
+  <div class="art-grid">
+    <!-- Artículo 1 -->
+    <article class="art-card">
+      <a href="#" class="art-img"><img src="https://images.unsplash.com/photo-1548624317-023a1a9e5264?w=700&q=80&auto=format&fit=crop" alt="Rescate animal"></a>
+      <div class="art-body">
+        <span class="art-meta">Análisis • 12 Mayo, 2026</span>
+        <h3>La comunicación estratégica en la defensa animal</h3>
+        <p>Cómo los mensajes bien construidos y la incidencia pública son fundamentales para generar un impacto real en las políticas de protección.</p>
+        <a href="#" class="read-more">Leer artículo</a>
+      </div>
+    </article>
+
+    <!-- Artículo 2 -->
+    <article class="art-card">
+      <a href="#" class="art-img"><img src="https://images.unsplash.com/photo-1425082661705-1834bfd0999c?w=700&q=80&auto=format&fit=crop" alt="Educación"></a>
+      <div class="art-body">
+        <span class="art-meta">Opinión • 28 Abril, 2026</span>
+        <h3>Por qué el antiespecismo debe entrar en las aulas</h3>
+        <p>Las instituciones educativas tienen el deber ético de enseñar el respeto hacia todas las especies y replantear el currículo formativo.</p>
+        <a href="#" class="read-more">Leer artículo</a>
+      </div>
+    </article>
+
+    <!-- Artículo 3 -->
+    <article class="art-card">
+      <a href="#" class="art-img"><img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=700&q=80&auto=format&fit=crop" alt="Vegetal"></a>
+      <div class="art-body">
+        <span class="art-meta">Actualidad • 15 Marzo, 2026</span>
+        <h3>El impacto del menú vegetal en las administraciones públicas</h3>
+        <p>Repaso a los avances institucionales logrados en la adaptación de alternativas vegetales en espacios de gestión pública.</p>
+        <a href="#" class="read-more">Leer artículo</a>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img class="mark" src="img/LogoEmpatiaBlanco.png" alt="Logo Empatía"> Empatía</div>
+        <p class="tag">Trabajamos por el desarrollo de la empatía, el conocimiento y la compasión hacia los animales.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Asociación</h4>
+        <a href="quienes-somos.html">Quiénes somos</a>
+        <a href="colabora.html">Colabora</a>
+        <a href="articulos.html">Artículos</a>
+      </div>
+      <div class="foot-col">
+        <h4>Participa</h4>
+        <a href="campanas.html">Campañas</a>
+        <a href="index.html#dona">Hazte socio</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <a href="mailto:hola@asociacionempatia.es">hola@asociacionempatia.es</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>La Asociación Empatía está inscrita en el Registro Nacional de Asociaciones, Sección 1ª, nº 597537.</span>
+      <span>© 2026 Empatía</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
